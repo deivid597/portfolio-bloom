@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { FeaturedTechIcons } from './TechIcons';
+import StatsHighlight from './StatsHighlight';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -60,7 +62,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-wrap gap-4 mb-12"
+            className="flex flex-wrap gap-4"
           >
             <motion.a
               href="#projects"
@@ -80,11 +82,14 @@ const Hero = () => {
             </motion.a>
           </motion.div>
 
+          {/* Featured Tech Stack */}
+          <FeaturedTechIcons />
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="flex items-center gap-6"
+            transition={{ delay: 0.85 }}
+            className="flex items-center gap-6 mt-8"
           >
             <a
               href="mailto:dsolano597@gmail.com"
@@ -113,6 +118,9 @@ const Hero = () => {
             </a>
           </motion.div>
         </motion.div>
+
+        {/* Stats Highlight Component */}
+        <StatsHighlight />
       </div>
 
       {/* Scroll Indicator */}
@@ -120,7 +128,7 @@ const Hero = () => {
         href="#about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 1.3 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors"
       >
         <motion.div

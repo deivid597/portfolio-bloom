@@ -11,7 +11,13 @@
     "title": "Ingeniero de Software",
     "subtitle": "Desarrollador Full Stack especializado en arquitecturas escalables para entornos web, móvil y escritorio",
     "cta": "Ver Proyectos",
-    "contact": "Contáctame"
+    "contact": "Contáctame",
+    "stats": {
+      "experience": "Años de Experiencia",
+      "projects": "Proyectos Completados",
+      "quality": "Calidad de Código",
+      "companies": "Empresas"
+    }
   },
   "about": {
     "title": "Sobre Mí",
