@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "about": "Sobre Mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Johnny Solano",
+    "title": "Ingeniero de Software",
+    "subtitle": "Desarrollador Full Stack especializado en arquitecturas escalables para entornos web, móvil y escritorio",
+    "cta": "Ver Proyectos",
+    "contact": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Ingeniero de software con experiencia en el diseño, desarrollo y liderazgo técnico de soluciones full stack para entornos web, escritorio y móvil.",
+    "approach": "Mi enfoque combina la definición de arquitecturas escalables, la implementación de estándares técnicos y la optimización de procesos de negocio mediante buenas prácticas tecnológicas.",
+    "teamwork": "Acostumbrado a trabajar bajo metodologías ágiles y coordinar con múltiples equipos, aportando visión estratégica y capacidad de ejecución para garantizar soluciones alineadas a objetivos corporativos.",
+    "experience": "Experiencia",
+    "experienceDesc": "Desarrollador Full Stack en Synapptica S.A",
+    "experienceDate": "Junio 2023 - Actual",
+    "education": "Educación",
+    "educationDesc": "Bachillerato en Informática Empresarial",
+    "educationSchool": "Universidad de Costa Rica",
+    "certifications": "Certificaciones",
+    "certificationsDesc": "Scrum Master Certificado"
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Móvil",
+    "database": "Bases de Datos",
+    "devops": "DevOps y Herramientas",
+    "soft": "Habilidades Blandas",
+    "softSkills": {
+      "communication": "Comunicación Efectiva",
+      "adaptability": "Adaptabilidad Tecnológica",
+      "leadership": "Liderazgo Técnico",
+      "teamwork": "Trabajo en Equipo"
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "viewProject": "Ver Proyecto",
+    "viewDemo": "Ver Demo",
+    "sinapsis": {
+      "title": "Sinapsis",
+      "company": "Hugo Hutchinson & Lesco",
+      "description": "Plataforma empresarial para RR.HH., inventario, logística, facturación (incluido el cumplimiento tributario), contabilidad y nómina. Desarrollada con .NET MVC, IIS, Kendo UI, Node.js, SQL Server e Ionic Angular para dispositivos móviles."
+    },
+    "uci": {
+      "title": "UCI Web Platform",
+      "company": "Universidad Internacional para la Cooperación",
+      "description": "Plataforma web React (JSX) para la gestión de expedientes académicos, admisiones y contenido digital. Experiencia de usuario totalmente responsiva y optimizada."
+    },
+    "municipalidad": {
+      "title": "Sistema de Trámites Administrativos",
+      "company": "Municipalidad de Limón",
+      "description": "Sistema web para flujo de trabajo y gestión documental, acceso basado en roles y generación dinámica de PDF para procesos administrativos."
+    },
+    "kontena": {
+      "title": "Kontena",
+      "company": "Hugo Hutchinson & Lesco",
+      "description": "Plataforma logística para la gestión, monitoreo e inspección de contenedores con .NET MVC, Kendo UI, Node.js, SQL Server y aplicación móvil Ionic Angular."
+    },
+    "qmatic": {
+      "title": "Plataforma de Encuestas Qmatic",
+      "company": "Banco de Costa Rica",
+      "description": "Plataforma web responsiva desarrollada con React JS, JSX y Vite para la gestión de encuestas personalizadas de clientes. Se implementó una sólida integración de seguridad mediante tokens de autenticación, identificadores únicos, cookies y las mejores prácticas de seguridad estándar."
+    }
+  },
+  "contact": {
+    "title": "Trabajemos Juntos",
+    "subtitle": "Siempre estoy interesado en conocer nuevos proyectos y oportunidades.",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "locationValue": "Guápiles, Pococí, Limón, Costa Rica"
+  }
+}
