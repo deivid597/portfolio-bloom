@@ -14,7 +14,7 @@ const Skills = () => {
     {
       icon: Server,
       title: t('skills.backend'),
-      skills: ['.NET Core', 'MVC', 'ASP.NET', 'ADO.NET', 'Node.js', 'Python', 'Java', 'PHP', 'C#'],
+      skills: ['.NET Core', 'MVC', 'ASP.NET', 'ADO.NET', 'Node.js', 'Python', 'Java', 'Spring Boot', 'PHP', 'C#', 'Strapi'],
     },
     {
       icon: Smartphone,
@@ -24,12 +24,12 @@ const Skills = () => {
     {
       icon: Database,
       title: t('skills.database'),
-      skills: ['SQL Server', 'MySQL', 'MongoDB'],
+      skills: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB'],
     },
     {
       icon: GitBranch,
       title: t('skills.devops'),
-      skills: ['Git', 'IIS', 'CI/CD', 'Version Control'],
+      skills: ['Git', 'IIS', 'AWS', 'CI/CD', 'Version Control'],
     },
     {
       icon: Users,
