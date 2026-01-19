@@ -82,7 +82,17 @@ const Navbar = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    const targetId = item.href.replace('#', '');
+                    const element = document.getElementById(targetId);
+                    if (element) {
+                      setTimeout(() => {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }, 300);
+                    }
+                  }}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
                 >
                   {item.label}
