@@ -1,8 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { FeaturedTechIcons } from './TechIcons';
-import StatsHighlight from './StatsHighlight';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -82,13 +80,10 @@ const Hero = () => {
             </motion.a>
           </motion.div>
 
-          {/* Featured Tech Stack */}
-          <FeaturedTechIcons />
-
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.85 }}
+            transition={{ delay: 0.7 }}
             className="flex items-center gap-6 mt-8"
           >
             <a
@@ -118,9 +113,6 @@ const Hero = () => {
             </a>
           </motion.div>
         </motion.div>
-
-        {/* Stats Highlight Component */}
-        <StatsHighlight />
       </div>
 
       {/* Scroll Indicator */}
@@ -128,7 +120,7 @@ const Hero = () => {
         href="#about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.3 }}
+        transition={{ delay: 0.9 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors"
       >
         <motion.div

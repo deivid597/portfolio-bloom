@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Code, Server, Smartphone, Database, GitBranch, Users } from 'lucide-react';
-import { SkillBadge } from './TechIcons';
 
 const Skills = () => {
   const { t } = useTranslation();
@@ -77,7 +76,12 @@ const Skills = () => {
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <SkillBadge key={skill} skill={skill} />
+                  <span
+                    key={skill}
+                    className="px-3 py-1 text-sm bg-secondary text-secondary-foreground rounded-full hover:bg-primary/10 transition-colors"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </motion.div>
