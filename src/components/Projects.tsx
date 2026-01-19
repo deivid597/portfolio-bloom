@@ -8,6 +8,46 @@ import projectMunicipalidad from '@/assets/project-municipalidad.jpg';
 import projectKontena from '@/assets/project-kontena.jpg';
 import projectQmatic from '@/assets/project-qmatic.jpg';
 
+// Tech icon configurations with brand colors
+const techConfig: Record<string, { icon: string; color: string; bg: string }> = {
+  '.NET MVC': { icon: '⬡', color: '#512BD4', bg: 'rgba(81, 43, 212, 0.15)' },
+  'IIS': { icon: '🌐', color: '#0078D4', bg: 'rgba(0, 120, 212, 0.15)' },
+  'Kendo UI': { icon: '◈', color: '#FF6358', bg: 'rgba(255, 99, 88, 0.15)' },
+  'Node.js': { icon: '⬢', color: '#339933', bg: 'rgba(51, 153, 51, 0.15)' },
+  'SQL Server': { icon: '🗄️', color: '#CC2927', bg: 'rgba(204, 41, 39, 0.15)' },
+  'Ionic Angular': { icon: '📱', color: '#3880FF', bg: 'rgba(56, 128, 255, 0.15)' },
+  'React': { icon: '⚛️', color: '#61DAFB', bg: 'rgba(97, 218, 251, 0.15)' },
+  'React JS': { icon: '⚛️', color: '#61DAFB', bg: 'rgba(97, 218, 251, 0.15)' },
+  'JSX': { icon: '{ }', color: '#F7DF1E', bg: 'rgba(247, 223, 30, 0.15)' },
+  'Responsive Design': { icon: '📐', color: '#38BDF8', bg: 'rgba(56, 189, 248, 0.15)' },
+  'Web System': { icon: '🖥️', color: '#6366F1', bg: 'rgba(99, 102, 241, 0.15)' },
+  'Workflow': { icon: '⚡', color: '#F59E0B', bg: 'rgba(245, 158, 11, 0.15)' },
+  'PDF Generation': { icon: '📄', color: '#EF4444', bg: 'rgba(239, 68, 68, 0.15)' },
+  'Role-based Access': { icon: '🔐', color: '#10B981', bg: 'rgba(16, 185, 129, 0.15)' },
+  'Vite': { icon: '⚡', color: '#646CFF', bg: 'rgba(100, 108, 255, 0.15)' },
+  'Authentication Tokens': { icon: '🔑', color: '#8B5CF6', bg: 'rgba(139, 92, 246, 0.15)' },
+  'Security': { icon: '🛡️', color: '#22C55E', bg: 'rgba(34, 197, 94, 0.15)' },
+};
+
+const TechBadge = ({ tech }: { tech: string }) => {
+  const config = techConfig[tech] || { icon: '•', color: '#94A3B8', bg: 'rgba(148, 163, 184, 0.15)' };
+  
+  return (
+    <motion.span
+      whileHover={{ scale: 1.05, y: -2 }}
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm backdrop-blur-sm border transition-all cursor-default"
+      style={{
+        background: config.bg,
+        borderColor: `${config.color}40`,
+        color: config.color,
+      }}
+    >
+      <span className="text-base">{config.icon}</span>
+      {tech}
+    </motion.span>
+  );
+};
+
 const Projects = () => {
   const { t } = useTranslation();
 
@@ -95,12 +135,7 @@ const Projects = () => {
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full"
-                      >
-                        {tech}
-                      </span>
+                      <TechBadge key={tech} tech={tech} />
                     ))}
                   </div>
 
