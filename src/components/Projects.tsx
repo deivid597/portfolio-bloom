@@ -25,47 +25,42 @@ import qmatic1 from '@/assets/qmatic-1.jpg';
 import qmatic2 from '@/assets/qmatic-2.jpg';
 import qmatic3 from '@/assets/qmatic-3.jpg';
 
-// Tech icon configurations with brand colors
-const techConfig: Record<string, { icon: string; color: string; bg: string }> = {
-  '.NET MVC': { icon: '⬡', color: '#512BD4', bg: 'rgba(81, 43, 212, 0.15)' },
-  'IIS': { icon: '🌐', color: '#0078D4', bg: 'rgba(0, 120, 212, 0.15)' },
-  'Kendo UI': { icon: '◈', color: '#FF6358', bg: 'rgba(255, 99, 88, 0.15)' },
-  'Node.js': { icon: '⬢', color: '#339933', bg: 'rgba(51, 153, 51, 0.15)' },
-  'SQL Server': { icon: '🗄️', color: '#CC2927', bg: 'rgba(204, 41, 39, 0.15)' },
-  'Ionic Angular': { icon: '📱', color: '#3880FF', bg: 'rgba(56, 128, 255, 0.15)' },
-  'React': { icon: '⚛️', color: '#61DAFB', bg: 'rgba(97, 218, 251, 0.15)' },
-  'React JS': { icon: '⚛️', color: '#61DAFB', bg: 'rgba(97, 218, 251, 0.15)' },
-  'JSX': { icon: '{ }', color: '#F7DF1E', bg: 'rgba(247, 223, 30, 0.15)' },
-  'Responsive Design': { icon: '📐', color: '#38BDF8', bg: 'rgba(56, 189, 248, 0.15)' },
-  'Web System': { icon: '🖥️', color: '#6366F1', bg: 'rgba(99, 102, 241, 0.15)' },
-  'Workflow': { icon: '⚡', color: '#F59E0B', bg: 'rgba(245, 158, 11, 0.15)' },
-  'PDF Generation': { icon: '📄', color: '#EF4444', bg: 'rgba(239, 68, 68, 0.15)' },
-  'Role-based Access': { icon: '🔐', color: '#10B981', bg: 'rgba(16, 185, 129, 0.15)' },
-  'Vite': { icon: '⚡', color: '#646CFF', bg: 'rgba(100, 108, 255, 0.15)' },
-  'Authentication Tokens': { icon: '🔑', color: '#8B5CF6', bg: 'rgba(139, 92, 246, 0.15)' },
-  'Security': { icon: '🛡️', color: '#22C55E', bg: 'rgba(34, 197, 94, 0.15)' },
-  'Strapi': { icon: '🚀', color: '#4945FF', bg: 'rgba(73, 69, 255, 0.15)' },
-  'PostgreSQL': { icon: '🐘', color: '#336791', bg: 'rgba(51, 103, 145, 0.15)' },
-  'AWS': { icon: '☁️', color: '#FF9900', bg: 'rgba(255, 153, 0, 0.15)' },
-  'Java': { icon: '☕', color: '#ED8B00', bg: 'rgba(237, 139, 0, 0.15)' },
-  'Spring Boot': { icon: '🍃', color: '#6DB33F', bg: 'rgba(109, 179, 63, 0.15)' },
-  'MongoDB': { icon: '🍃', color: '#47A248', bg: 'rgba(71, 162, 72, 0.15)' },
+// Tech icon configurations - minimalist palette aligned with portfolio
+const techIcons: Record<string, string> = {
+  '.NET MVC': '⬡',
+  'IIS': '🌐',
+  'Kendo UI': '◈',
+  'Node.js': '⬢',
+  'SQL Server': '🗄️',
+  'Ionic Angular': '📱',
+  'React': '⚛️',
+  'React JS': '⚛️',
+  'JSX': '{ }',
+  'Responsive Design': '📐',
+  'Web System': '🖥️',
+  'Workflow': '⚡',
+  'PDF Generation': '📄',
+  'Role-based Access': '🔐',
+  'Vite': '⚡',
+  'Authentication Tokens': '🔑',
+  'Security': '🛡️',
+  'Strapi': '🚀',
+  'PostgreSQL': '🐘',
+  'AWS': '☁️',
+  'Java': '☕',
+  'Spring Boot': '🍃',
+  'MongoDB': '🍃',
 };
 
 const TechBadge = ({ tech }: { tech: string }) => {
-  const config = techConfig[tech] || { icon: '•', color: '#94A3B8', bg: 'rgba(148, 163, 184, 0.15)' };
+  const icon = techIcons[tech] || '•';
   
   return (
     <motion.span
-      whileHover={{ scale: 1.05, y: -2 }}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm backdrop-blur-sm border transition-all cursor-default"
-      style={{
-        background: config.bg,
-        borderColor: `${config.color}40`,
-        color: config.color,
-      }}
+      whileHover={{ scale: 1.03, y: -1 }}
+      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium bg-muted/60 text-foreground/80 border border-border/50 hover:border-primary/30 hover:bg-muted transition-all cursor-default"
     >
-      <span className="text-base">{config.icon}</span>
+      <span className="text-sm opacity-70">{icon}</span>
       {tech}
     </motion.span>
   );
@@ -80,7 +75,7 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
     
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 2500);
+    }, 5000); // Standard 5 seconds delay
 
     return () => clearInterval(interval);
   }, [images.length]);
