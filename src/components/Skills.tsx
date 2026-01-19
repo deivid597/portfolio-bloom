@@ -49,7 +49,7 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-gradient">
@@ -64,7 +64,7 @@ const Skills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ delay: index * 0.1 }}
               className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all group"
             >
