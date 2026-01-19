@@ -11,7 +11,13 @@
     "title": "Software Engineer",
     "subtitle": "Full Stack Developer specialized in scalable architectures for web, mobile, and desktop environments",
     "cta": "View Projects",
-    "contact": "Contact Me"
+    "contact": "Contact Me",
+    "stats": {
+      "experience": "Years Experience",
+      "projects": "Projects Completed",
+      "quality": "Code Quality",
+      "companies": "Companies"
+    }
   },
   "about": {
     "title": "About Me",
