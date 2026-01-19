@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -94,22 +94,13 @@ const Hero = () => {
               <Mail size={22} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/david-solano-319337252/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={22} />
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={22} />
             </a>
           </motion.div>
         </motion.div>
