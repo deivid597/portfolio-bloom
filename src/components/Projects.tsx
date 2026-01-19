@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 import projectSinapsis from '@/assets/project-sinapsis.jpg';
 import projectUci from '@/assets/project-uci.jpg';
@@ -48,37 +49,90 @@ const TechBadge = ({ tech }: { tech: string }) => {
   );
 };
 
+// Auto-sliding image carousel component
+const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <div className="relative h-64 md:h-80 overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          alt={`${alt} - ${currentIndex + 1}`}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
+          className="w-full h-full object-cover absolute inset-0"
+        />
+      </AnimatePresence>
+      
+      {/* Gradient overlay for mobile */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent md:hidden" />
+      
+      {/* Slide indicators */}
+      {images.length > 1 && (
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'bg-primary w-6' 
+                  : 'bg-foreground/30 hover:bg-foreground/50'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const Projects = () => {
   const { t } = useTranslation();
 
   const projects = [
     {
       key: 'sinapsis',
-      image: projectSinapsis,
+      images: [projectSinapsis, projectKontena, projectQmatic],
       link: 'http://demosynapptica.net:91/',
       tech: ['.NET MVC', 'IIS', 'Kendo UI', 'Node.js', 'SQL Server', 'Ionic Angular'],
     },
     {
       key: 'uci',
-      image: projectUci,
+      images: [projectUci, projectSinapsis],
       link: 'https://uci.ac.cr/es/home',
       tech: ['React', 'JSX', 'Responsive Design'],
     },
     {
       key: 'municipalidad',
-      image: projectMunicipalidad,
+      images: [projectMunicipalidad, projectUci, projectKontena],
       link: null,
       tech: ['Web System', 'Workflow', 'PDF Generation', 'Role-based Access'],
     },
     {
       key: 'kontena',
-      image: projectKontena,
+      images: [projectKontena, projectSinapsis, projectMunicipalidad],
       link: 'http://demosynapptica.net:92/',
       tech: ['.NET MVC', 'Kendo UI', 'Node.js', 'SQL Server', 'Ionic Angular'],
     },
     {
       key: 'qmatic',
-      image: projectQmatic,
+      images: [projectQmatic, projectUci, projectSinapsis],
       link: 'https://orchestra.synapptica.net:3002/',
       tech: ['React JS', 'JSX', 'Vite', 'Authentication Tokens', 'Security'],
     },
@@ -110,15 +164,11 @@ const Projects = () => {
               className="group relative rounded-2xl overflow-hidden bg-gradient-card border border-border hover:border-primary/30 transition-all"
             >
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Image */}
-                <div className="relative h-64 md:h-80 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={t(`projects.${project.key}.title`)}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent md:hidden" />
-                </div>
+                {/* Image Slider */}
+                <ImageSlider 
+                  images={project.images} 
+                  alt={t(`projects.${project.key}.title`)} 
+                />
 
                 {/* Content */}
                 <div className="p-6 md:p-8 flex flex-col justify-center">
