@@ -3,11 +3,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-import projectSinapsis from '@/assets/project-sinapsis.jpg';
-import projectUci from '@/assets/project-uci.jpg';
-import projectMunicipalidad from '@/assets/project-municipalidad.jpg';
-import projectKontena from '@/assets/project-kontena.jpg';
-import projectQmatic from '@/assets/project-qmatic.jpg';
+// Project images - Sinapsis
+import sinapsis1 from '@/assets/sinapsis-1.jpg';
+import sinapsis2 from '@/assets/sinapsis-2.jpg';
+
+// Project images - UCI
+import uci1 from '@/assets/uci-1.jpg';
+import uci2 from '@/assets/uci-2.jpg';
+import uci3 from '@/assets/uci-3.jpg';
+
+// Project images - Municipalidad
+import municipalidad1 from '@/assets/municipalidad-1.jpg';
+import municipalidad2 from '@/assets/municipalidad-2.jpg';
+
+// Project images - Kontena
+import kontena1 from '@/assets/kontena-1.jpg';
+import kontena2 from '@/assets/kontena-2.jpg';
+
+// Project images - Qmatic
+import qmatic1 from '@/assets/qmatic-1.jpg';
+import qmatic2 from '@/assets/qmatic-2.jpg';
+import qmatic3 from '@/assets/qmatic-3.jpg';
 
 // Tech icon configurations with brand colors
 const techConfig: Record<string, { icon: string; color: string; bg: string }> = {
@@ -55,7 +71,7 @@ const TechBadge = ({ tech }: { tech: string }) => {
   );
 };
 
-// Auto-sliding image carousel component
+// Auto-sliding image carousel component with enhanced styling
 const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -70,26 +86,32 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
   }, [images.length]);
 
   return (
-    <div className="relative h-64 md:h-80 overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={currentIndex}
-          src={images[currentIndex]}
-          alt={`${alt} - ${currentIndex + 1}`}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          className="w-full h-full object-cover absolute inset-0"
-        />
-      </AnimatePresence>
+    <div className="relative h-64 md:h-80 overflow-hidden bg-gradient-to-br from-muted/50 to-muted p-3 md:p-4">
+      {/* Frame container with border */}
+      <div className="relative w-full h-full rounded-xl overflow-hidden border-4 border-primary/20 shadow-xl">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentIndex}
+            src={images[currentIndex]}
+            alt={`${alt} - ${currentIndex + 1}`}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+            className="w-full h-full object-cover absolute inset-0"
+          />
+        </AnimatePresence>
+        
+        {/* Inner shadow overlay */}
+        <div className="absolute inset-0 shadow-[inset_0_0_30px_rgba(0,0,0,0.2)]" />
+      </div>
       
       {/* Gradient overlay for mobile */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent md:hidden" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent md:hidden pointer-events-none" />
       
       {/* Slide indicators */}
       {images.length > 1 && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {images.map((_, index) => (
             <button
               key={index}
@@ -114,31 +136,31 @@ const Projects = () => {
   const projects = [
     {
       key: 'sinapsis',
-      images: [projectSinapsis, projectKontena, projectQmatic],
+      images: [sinapsis1, sinapsis2],
       link: 'http://demosynapptica.net:91/',
       tech: ['.NET MVC', 'IIS', 'Kendo UI', 'Node.js', 'SQL Server', 'Ionic Angular'],
     },
     {
       key: 'uci',
-      images: [projectUci, projectSinapsis],
+      images: [uci1, uci2, uci3],
       link: 'https://uci.ac.cr/es/home',
       tech: ['React', 'JSX', 'Strapi', 'PostgreSQL', 'Responsive Design'],
     },
     {
       key: 'municipalidad',
-      images: [projectMunicipalidad, projectUci, projectKontena],
+      images: [municipalidad1, municipalidad2],
       link: null,
       tech: ['Web System', 'Workflow', 'PDF Generation', 'Role-based Access'],
     },
     {
       key: 'kontena',
-      images: [projectKontena, projectSinapsis, projectMunicipalidad],
+      images: [kontena1, kontena2],
       link: 'http://demosynapptica.net:92/',
       tech: ['.NET MVC', 'Kendo UI', 'Node.js', 'SQL Server', 'Ionic Angular'],
     },
     {
       key: 'qmatic',
-      images: [projectQmatic, projectUci, projectSinapsis],
+      images: [qmatic1, qmatic2, qmatic3],
       link: 'https://orchestra.synapptica.net:3002/',
       tech: ['React JS', 'JSX', 'Vite', 'Authentication Tokens', 'Security'],
     },
