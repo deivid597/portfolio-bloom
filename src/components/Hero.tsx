@@ -33,7 +33,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-4 text-gradient"
+            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 py-2 text-gradient leading-tight"
           >
             {t('hero.name')}
           </motion.h1>

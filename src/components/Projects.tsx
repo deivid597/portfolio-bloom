@@ -28,6 +28,12 @@ const techConfig: Record<string, { icon: string; color: string; bg: string }> = 
   'Vite': { icon: '⚡', color: '#646CFF', bg: 'rgba(100, 108, 255, 0.15)' },
   'Authentication Tokens': { icon: '🔑', color: '#8B5CF6', bg: 'rgba(139, 92, 246, 0.15)' },
   'Security': { icon: '🛡️', color: '#22C55E', bg: 'rgba(34, 197, 94, 0.15)' },
+  'Strapi': { icon: '🚀', color: '#4945FF', bg: 'rgba(73, 69, 255, 0.15)' },
+  'PostgreSQL': { icon: '🐘', color: '#336791', bg: 'rgba(51, 103, 145, 0.15)' },
+  'AWS': { icon: '☁️', color: '#FF9900', bg: 'rgba(255, 153, 0, 0.15)' },
+  'Java': { icon: '☕', color: '#ED8B00', bg: 'rgba(237, 139, 0, 0.15)' },
+  'Spring Boot': { icon: '🍃', color: '#6DB33F', bg: 'rgba(109, 179, 63, 0.15)' },
+  'MongoDB': { icon: '🍃', color: '#47A248', bg: 'rgba(71, 162, 72, 0.15)' },
 };
 
 const TechBadge = ({ tech }: { tech: string }) => {
@@ -58,7 +64,7 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
     
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -116,7 +122,7 @@ const Projects = () => {
       key: 'uci',
       images: [projectUci, projectSinapsis],
       link: 'https://uci.ac.cr/es/home',
-      tech: ['React', 'JSX', 'Responsive Design'],
+      tech: ['React', 'JSX', 'Strapi', 'PostgreSQL', 'Responsive Design'],
     },
     {
       key: 'municipalidad',
