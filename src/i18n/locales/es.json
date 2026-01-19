@@ -28,8 +28,10 @@
     "experienceDesc": "Desarrollador Full Stack en Synapptica S.A",
     "experienceDate": "Junio 2023 - Actual",
     "education": "Educación",
-    "educationDesc": "Lic. Ingeniería en Sistemas (CyberSeguridad) | Bachillerato en Informática Empresarial",
-    "educationSchool": "Universidad de Costa Rica",
+    "educationDesc1": "Lic. Ingeniería en Sistemas (CyberSeguridad)",
+    "educationSchool1": "Universidad de San Marcos",
+    "educationDesc2": "Bachillerato en Informática Empresarial",
+    "educationSchool2": "Universidad de Costa Rica",
     "certifications": "Certificaciones",
     "certificationsDesc": "Scrum Master Certificado"
   },
