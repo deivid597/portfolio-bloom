@@ -71,6 +71,14 @@ const Hero = () => {
               {t('hero.cta')}
             </motion.a>
             <motion.a
+              href="#skills"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium rounded-lg bg-secondary transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t('nav.skills')}
+            </motion.a>
+            <motion.a
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium rounded-lg hover:bg-secondary transition-colors"
               whileHover={{ scale: 1.05 }}
