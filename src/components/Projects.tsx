@@ -142,12 +142,6 @@ const Projects = () => {
       tech: ['React', 'JSX', 'Strapi', 'PostgreSQL', 'Responsive Design'],
     },
     {
-      key: 'municipalidad',
-      images: [municipalidad1, municipalidad2],
-      link: null,
-      tech: ['Web System', 'Workflow', 'PDF Generation', 'Role-based Access'],
-    },
-    {
       key: 'kontena',
       images: [kontena1, kontena2],
       link: 'http://demosynapptica.net:92/',
@@ -156,9 +150,16 @@ const Projects = () => {
     {
       key: 'qmatic',
       images: [qmatic1, qmatic2, qmatic3],
-      link: 'https://orchestra.synapptica.net:3002/',
+      link: 'https://orchestra.synapptica.net:8443/survey',
       tech: ['React JS', 'JSX', 'Vite', 'Authentication Tokens', 'Security'],
     },
+    {
+      key: 'municipalidad',
+      images: [municipalidad1, municipalidad2],
+      link: null,
+      tech: ['Web System', 'Workflow', 'PDF Generation', 'Role-based Access'],
+    }
+    
   ];
 
   return (

@@ -57,11 +57,11 @@
     "sinapsis": {
       "title": "Sinapsis",
       "company": "Hugo Hutchinson & Lesco",
-      "description": "Plataforma empresarial para RR.HH., inventario, logística, facturación (incluido el cumplimiento tributario), contabilidad y nómina. Desarrollada con .NET MVC, IIS, Kendo UI, Node.js, SQL Server e Ionic Angular para dispositivos móviles."
+      "description": "Plataforma empresarial para RR.HH., inventario, logística, facturación (incluido Hacienda), contabilidad y nómina (Planillas). Desarrollada con .NET MVC, IIS, Kendo UI, Node.js, SQL Server e Ionic Angular para dispositivos móviles."
     },
     "uci": {
       "title": "UCI Web Platform",
-      "company": "Universidad Internacional para la Cooperación",
+      "company": "Universidad para la Cooperación Internacional",
       "description": "Plataforma web React (JSX) para la gestión de expedientes académicos, admisiones y contenido digital. Experiencia de usuario totalmente responsiva y optimizada."
     },
     "municipalidad": {
