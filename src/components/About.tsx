@@ -38,7 +38,7 @@ const About = () => {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-gradient">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold pb-4 text-gradient">
             {t('about.title')}
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mb-12" />

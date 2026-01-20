@@ -132,7 +132,7 @@ const Projects = () => {
     {
       key: 'sinapsis',
       images: [sinapsis1, sinapsis2],
-      link: 'http://demosynapptica.net:91/',
+      link: 'https://hgsynappsis.ovh/',
       tech: ['.NET MVC', 'IIS', 'Kendo UI', 'Node.js', 'SQL Server', 'Ionic Angular'],
     },
     {
@@ -144,7 +144,7 @@ const Projects = () => {
     {
       key: 'kontena',
       images: [kontena1, kontena2],
-      link: 'http://demosynapptica.net:92/',
+      link: 'https://hgkontena.ovh/',
       tech: ['.NET MVC', 'Kendo UI', 'Node.js', 'SQL Server', 'Ionic Angular'],
     },
     {
@@ -171,7 +171,7 @@ const Projects = () => {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-gradient">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold pb-4 text-gradient">
             {t('projects.title')}
           </h2>
           <div className="w-20 h-1 bg-gradient-primary rounded-full mb-12" />
