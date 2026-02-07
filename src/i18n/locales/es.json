@@ -57,7 +57,7 @@
     "sinapsis": {
       "title": "Sinapsis",
       "company": "Hugo Hutchinson & Lesco",
-      "description": "Plataforma empresarial para RR.HH., inventario, logística, facturación (incluido Hacienda), contabilidad y nómina (Planillas). Desarrollada con .NET MVC, IIS, Kendo UI, Node.js, SQL Server e Ionic Angular para dispositivos móviles."
+      "description": "Plataforma empresarial para RR.HH., inventario, logística, facturación (incluido Hacienda), contabilidad y nómina (Planillas). Desarrollada con ASP.NET Core MVC / Web API, IIS, Kendo UI, Node.js, SQL Server e Ionic Angular para dispositivos móviles."
     },
     "uci": {
       "title": "UCI Web Platform",
@@ -72,7 +72,7 @@
     "kontena": {
       "title": "Kontena",
       "company": "Hugo Hutchinson & Lesco",
-      "description": "Plataforma logística para la gestión, monitoreo e inspección de contenedores con .NET MVC, Kendo UI, Node.js, SQL Server y aplicación móvil Ionic Angular."
+      "description": "Plataforma logística para la gestión, monitoreo e inspección de contenedores con ASP.NET Core MVC / Web API, Kendo UI, Node.js, SQL Server y aplicación móvil Ionic Angular."
     },
     "qmatic": {
       "title": "Plataforma de Encuestas Qmatic",
