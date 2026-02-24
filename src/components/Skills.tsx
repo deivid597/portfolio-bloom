@@ -24,7 +24,7 @@ const Skills = () => {
     {
       icon: Database,
       title: t('skills.database'),
-      skills: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB'],
+      skills: ['SQL Server', 'Oracle SQL', 'MySQL', 'PostgreSQL', 'MongoDB'],
     },
     {
       icon: GitBranch,
